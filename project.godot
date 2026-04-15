@@ -8,10 +8,15 @@
 
 config_version=5
 
+[animation]
+
+compatibility/default_parent_skeleton_in_mesh_instance_3d=true
+
 [application]
 
 config/name="3D_Game_Template"
-config/features=PackedStringArray("4.5")
+run/main_scene="uid://s17k0gy5v185"
+config/features=PackedStringArray("4.6")
 config/icon="res://icon.png"
 
 [autoload]
@@ -27,10 +32,6 @@ window/size/fullscreen=true
 [editor_plugins]
 
 enabled=PackedStringArray()
-
-[gui]
-
-common/drop_mouse_on_gui_input_disabled=true
 
 [input]
 

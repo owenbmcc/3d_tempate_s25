@@ -6,7 +6,7 @@ https://github.com/rbarongr/GodotFirstPersonController/blob/main/Player/player.g
 • CharacterBody3D #PlayerController.gd (Player)
 	• CollisionShape3D
 	• Camera
-		~ Area3D (PickupArea)
+		% PlayerPickup
 	~ AudioStreamPlayer3D (Jump)
 	~ AudioStreamPlayer3D (Footstep)
 	~ Timer (FootstepTimer)

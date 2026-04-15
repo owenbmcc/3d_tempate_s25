@@ -28,9 +28,13 @@ var is_picked = false
 signal update_console
 
 func _ready():
+	assert(camera != null, "add camera to export vars")
+	assert(get_parent().get_class() == "Camera3D", "PlayerPickup must be child of player camera")
+	
 	# connect signals from pickup area to script
 	pickup_area.body_entered.connect(_on_body_entered)
 	pickup_area.body_exited.connect(_on_body_exited)
+	
 
 func _physics_process(_delta):
 	# check that we have an object picked up
@@ -70,7 +74,8 @@ func _unhandled_input(_event):
 			else:
 				# pick up object
 				is_picked = true
-				$Pickup.play()
+				if $PickupSound:
+					$Pickup.play()
 	
 	# detect user clicked throw
 	if Input.is_action_just_pressed("throw") and pickup_object and is_picked:
